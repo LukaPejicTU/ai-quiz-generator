@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 AI Quiz Generator
 
-## Getting Started
+A full-stack interactive quiz application built with **Next.js 14**, **TypeScript**, and **AI Integration (Groq/Llama 3)**.
+Users can enter any topic, select a difficulty level, and instantly generate a unique multiple-choice quiz with real-time scoring and feedback.
 
-First, run the development server:
+![App Screenshot](./screenshot.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🚀 AI-Powered Generation:** Generates 3 unique questions on *any* topic using the Groq API.
+- **🎛️ Customizable Difficulty:** Choose between Easy, Medium, or Hard modes.
+- **✅ Interactive UI:** Instant visual feedback (Green/Red) for correct/incorrect answers.
+- **🛡️ Robust Error Handling:** Loading states, input validation, and empty field protection.
+- **🔄 Reset Functionality:** Ability to clear state and generate a new quiz without reloading.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **AI Model:** Llama 3 (via Groq API)
+- **State Management:** React Hooks (useState)
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+Follow these steps to run the project locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/LukaPejicTU/ai-quiz-generator
+    cd ai-quiz-generator
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Set up Environment Variables:**
+    Create a `.env.local` file in the root directory and add your Groq API key:
+    ```env
+    GROQ_API_KEY=your_api_key_here
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5.  Open http://localhost:3000 in your browser.
+
+## 🧠 What I Learned
+
+Building this project helped me master several key Full Stack concepts:
+
+- **Next.js App Router:** Building API routes (`route.ts`) to securely handle server-side logic and protect API keys.
+- **Prompt Engineering:** Structuring system prompts to force the AI to return strict JSON data for the frontend.
+- **React State & Props:** Managing complex state (`loading`, `questions`, `score`) and lifting state up to share data between parent and child components.
+- **TypeScript Interfaces:** Defining strict types for API responses to prevent runtime errors.
+- **Conditional Rendering:** Dynamically styling UI elements based on user interaction (e.g., changing button colors on selection).
+
+## 🔮 Future Improvements
+
+- [ ] Add a "Summary Screen" at the end of the quiz.
+- [ ] Save high scores to a database (PostgreSQL/Prisma).
+- [ ] Add a countdown timer for each question.
+
+---
+
+*Built by Luka Pejic
