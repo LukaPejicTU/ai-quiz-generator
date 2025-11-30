@@ -3,7 +3,7 @@
 A full-stack interactive quiz application built with **Next.js 14**, **TypeScript**, and **AI Integration (Groq/Llama 3)**.
 Users can enter any topic, select a difficulty level, and instantly generate a unique multiple-choice quiz with real-time scoring and feedback.
 
-![App Screenshot](./screenshot.jpg)
+![App Screenshot](./screenshot.png)
 
 ## ✨ Features
 
